@@ -1,0 +1,143 @@
+body{
+    background-color: #f6f5f5;
+    width: 80%;
+    max-width: 1920px;
+    margin: auto;
+}
+.headerHolder{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.title{
+    font-size: 5vh;
+    text-transform: uppercase;
+    color: #1f3c88;
+    font-family: 'Chilanka', sarif;
+}
+.points{
+    color: #1f3c88;
+    font-family: 'Chilanka', sarif;
+    font-size: 3vh;
+}
+.points > p,
+.title{
+    margin: 0;
+}
+.heartMargin{
+    margin-right: 2px;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-holder {
+    position: relative;
+    margin: 10px;
+}
+
+.card-out,
+.card-in{
+    border: 2px solid #ee6f57;
+    border-radius: 10px;
+    padding: 4% 2%;
+}
+
+.card-correct{
+    border: 2px solid #16e16e;
+    border-radius: 10px;
+}
+
+.card-out{    
+    background-color: #ee6f57;
+    content: url(./img/question.png);
+    backface-visibility: hidden;
+
+}
+
+.card-in{   
+    background-color: white;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+.btnHolder{
+    background-color: #f1f1f5;
+    border: 2px solid #1f3c88;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnHolder > .txtBtnHolder{
+    color: #1f3c88;
+    font-family: 'Chilanka', sarif;
+}
+
+.btnHolder > .btn{
+    font-family: 'Chilanka', sarif;
+    border: 2px solid #ee6f57;
+    padding: 10px 20px;
+    color: #1f3c88;
+    font-size: 2vh;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.btnHolder > .btn:hover{
+    border: 2px solid #ee6f57;
+    background-color: #1f3c88;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 2vh;
+    font-weight: bold;
+    margin: 5px;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        width: 100%;
+    }
+    .title{
+        font-size: 3.5vh;
+    }
+    .points{
+        font-size: 2.5vh;
+    }
+    .card-holder{
+        margin: 5px;
+    }
+    .card-out,
+    .card-in{
+        width: 60px;
+        height: 60px;
+        padding: 2.5;
+    }
+    .headerHolder{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .btnHolder{
+        width: 90%;
+        left: 5%;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .btnHolder{
+        width: 30%;
+        left: 35%;
+    }
+  }
